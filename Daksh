@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For My Khushu ❤️</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+font-family:Arial;
+color:white;
+text-align:center;
+overflow:hidden;
+padding:20px;
+}
+
+h1{
+font-size:38px;
+}
+
+#message{
+font-size:18px;
+max-width:600px;
+margin-top:20px;
+line-height:1.6;
+}
+
+button{
+margin:10px;
+padding:12px 25px;
+border:none;
+border-radius:25px;
+font-size:18px;
+background:white;
+color:#ff4f81;
+cursor:pointer;
+}
+
+#noBtn{
+position:absolute;
+}
+
+.heart{
+position:absolute;
+color:white;
+font-size:20px;
+animation:fall 6s linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-10vh)}
+100%{transform:translateY(110vh)}
+}
+
+#final{
+display:none;
+font-size:30px;
+margin-top:40px;
+}
+
+</style>
+
+<script>
+
+function createHearts(){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(3+Math.random()*3)+"s";
+document.body.appendChild(heart);
+setTimeout(()=>{heart.remove()},6000);
+}
+
+setInterval(createHearts,300);
+
+function runAway(){
+let btn=document.getElementById("noBtn");
+btn.style.top=Math.random()*80+"vh";
+btn.style.left=Math.random()*80+"vw";
+}
+
+function sayYes(){
+document.getElementById("question").style.display="none";
+document.getElementById("final").style.display="block";
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>For My Khushu 🐰❤️</h1>
+
+<div style="font-size:60px">🐰</div>
+<div>Khushu</div>
+
+<div id="message">
+
+i love you a lot my khushu i always love you with my all heart i think u have changed me alot in a good way i never want to hurt you and seriously i think u have the preetiest smile in whole world bas kabhi kabar mera gussa sambhale i think i can spend my whole life with you humari ladaiya hoti h i know par joh happiness sirf terse baat karne se milti h yaa tere sath hone se hoti h it stays in my heart forever and i want you be the last one !! Koi kuch bhi bole i think you are the perfect one for me i love every bit of you !! seriously dont ever think to leave me !! Kaise bhi situation hoo!!
+
+</div>
+
+<div id="question" style="margin-top:30px">
+
+<h2>Do you love me? ❤️</h2>
+
+<button onclick="sayYes()">Yes ❤️</button>
+<button id="noBtn" onmouseover="runAway()">No 😅</button>
+
+</div>
+
+<div id="final">
+
+💖 I LOVE YOU WITH MY WHOLE HEART 💖
+
+</div>
+
+<audio autoplay loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+</audio>
+
+</body>
+</html>
